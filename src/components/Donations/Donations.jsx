@@ -4,9 +4,10 @@ import Donation from "../Donation/Donation";
 
 
 const Donations = ({ donationsData }) => {
+    const allDonationData = [...donationsData];
     
-    const [displayCards, setDisplayCards] = useState(donationsData)
-    const [searchDisplayCards, setSearchDisplayCards] = useState(donationsData)
+    const [displayCards, setDisplayCards] = useState(allDonationData)
+    const [searchDisplayCards, setSearchDisplayCards] = useState(allDonationData)
     console.log(displayCards);
     const searchRef = useRef();
 
@@ -42,7 +43,7 @@ const Donations = ({ donationsData }) => {
 
             <div className="h-[70vh] bg-[url('../../../src/assets/banner.jpg')] flex items-center justify-center bg-cover bg-blend-overlay bg-[#fffffff2]">
                 <div>
-                    <h1 className="text-3xl text-[#0B0B0B] font-bold mb-7">I Grow By Helping People In Need</h1>
+                    <h1 className="text-lg md:text-3xl text-[#0B0B0B] font-bold mb-7">I Grow By Helping People In Need</h1>
                     <div className="relative flex h-10 w-full min-w-[200px] max-w-[24rem] mt-3">
                         <input ref={searchRef}
                             type="search"
@@ -63,8 +64,8 @@ const Donations = ({ donationsData }) => {
             </div>
 
             {/* all cards section */}
-            <div className="my-24 px-10">
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className="my-24">
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mx-10">
                     {
                         searchDisplayCards.map(donation => <Donation key={donation?.id} donation={donation}></Donation>)
                     }

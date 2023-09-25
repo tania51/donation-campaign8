@@ -52,12 +52,12 @@ const Statistics = () => {
                             ))}
                         </Pie>
                     </PieChart>
-                    <div className='flex gap-7 -mt-32'>
-                        <div className='flex gap-2 items-center'>
+                    <div className='lg:flex gap-7 -mt-32'>
+                        <div className='flex gap-2 items-center justify-center'>
                             <p>Your Donation</p>
                             <span className='block w-36 rounded h-4 bg-[#00C49F]'></span>
                         </div>
-                        <div className='flex gap-2 items-center'>
+                        <div className='flex gap-2 items-center justify-center'>
                             <p>Total Donation</p>
                             <span className='block w-36 rounded h-4 bg-[#FF444A]'></span>
                         </div>

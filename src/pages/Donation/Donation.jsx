@@ -13,7 +13,7 @@ const Donation = () => {
 
     return (
         <div>
-            <div className="grid md:grid-cols-2 gap-5">
+            <div className="grid lg:grid-cols-2 gap-5 px-10">
                 {
                     seeAll ? getDonationInfoFromLocal.map(donate => <DonateAllCard key={donate.id} donate={donate}></DonateAllCard>) :
                     getDonationInfoFromLocal.slice(0, 4).map(donate =><DonateAllCard key={donate.id} donate={donate}></DonateAllCard>)
