@@ -12,6 +12,7 @@ const Donations = ({ donationsData }) => {
 
     const searchHandeler = e => {
         e.preventDefault();
+        
         const searchInputValue = searchRef.current.value;
         console.log(searchInputValue);
         if(searchInputValue === '') {
@@ -39,7 +40,7 @@ const Donations = ({ donationsData }) => {
         <div>
             {/* banner section */}
 
-            <div className="h-[70vh] bg-[url('../../../src/assets/banner.jpg')] flex items-center justify-center">
+            <div className="h-[70vh] bg-[url('../../../src/assets/banner.jpg')] flex items-center justify-center bg-cover bg-blend-overlay bg-[#fffffff2]">
                 <div>
                     <h1 className="text-3xl text-[#0B0B0B] font-bold mb-7">I Grow By Helping People In Need</h1>
                     <div className="relative flex h-10 w-full min-w-[200px] max-w-[24rem] mt-3">

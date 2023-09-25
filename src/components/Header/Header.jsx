@@ -6,25 +6,22 @@ const Header = () => {
         <div className="px-10">
             <div className="flex justify-between py-6 items-center">
                 <img className="w-52" src="../../../src/assets/Logo.png" alt="some" />
-                <div className="flex gap-5 text-lg">
-                    <NavLink
-                        to="/"
+                <div className="flex text-lg gap-3">
+                    <NavLink to="/"
                         className={({ isActive, isPending }) =>
-                            isPending ? "text-[#0B0B0B]" : isActive ? "text-[#FF444A] underline" : ""
+                            isPending ? "pending" : isActive ? "active" : ""
                         }
                     >Home
                     </NavLink>
-                    <NavLink
-                        to="/donation"
+                    <NavLink to="/donation"
                         className={({ isActive, isPending }) =>
-                            isPending ? "text-[#0B0B0B]" : isActive ? "text-[#FF444A] underline" : ""
+                            isPending ? "pending" : isActive ? "active" : ""
                         }
                     >Donation
                     </NavLink>
-                    <NavLink
-                        to="/statistics"
+                    <NavLink to="/statistics"
                         className={({ isActive, isPending }) =>
-                            isPending ? "text-[#0B0B0B]" : isActive ? "text-[#FF444A] underline" : ""
+                            isPending ? "pending" : isActive ? "active" : ""
                         }
                     >Statistics
                     </NavLink>
