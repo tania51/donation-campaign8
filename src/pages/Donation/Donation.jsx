@@ -1,5 +1,6 @@
 import { useState } from "react";
-import DonateAllCard from "../../components/Banner/DonateAllCard/DonateAllCard";
+import DonateAllCard from "../../components/DonateAllCard/DonateAllCard";
+// import DonateAllCard from "../../components/DonateAllCard/DonateAllCard";
 
 
 
@@ -15,7 +16,7 @@ const Donation = () => {
             <div className="grid md:grid-cols-2 gap-5">
                 {
                     seeAll ? getDonationInfoFromLocal.map(donate => <DonateAllCard key={donate.id} donate={donate}></DonateAllCard>) :
-                    getDonationInfoFromLocal.slice(0, 4).map(donate => <DonateAllCard key={donate.id} donate={donate}></DonateAllCard>)
+                    getDonationInfoFromLocal.slice(0, 4).map(donate =><DonateAllCard key={donate.id} donate={donate}></DonateAllCard>)
                 }
             </div>
             <div className="text-center">

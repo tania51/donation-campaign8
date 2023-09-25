@@ -13,7 +13,7 @@ const SingleDonation = () => {
 
     const clickedDonation = singleDonation.find(donate => donate.id === singleIdInt);
     
-    const { id, picture, price, title, description } = clickedDonation;
+    const { id, picture, price, title, description, text_color } = clickedDonation;
 
     useEffect(() => {
         const donateSavedArr = [];
@@ -45,7 +45,7 @@ const SingleDonation = () => {
                         alt="nature image"
                     />
                     <figcaption className="absolute bottom-0 left-2/4 flex w-full -translate-x-2/4 justify-between bg-[#0b0b0b80] py-4 px-6 shadow-lg shadow-black/5 saturate-200 backdrop-blur-sm">
-                        <button>Donate ${price}</button>
+                        <button style={{backgroundColor: text_color}} className="text-white px-3 rounded py-1">Donate ${price}</button>
                     </figcaption>
                     <h2 className="text-3xl text-[#0B0B0B] font-bold pt-7">{title}</h2>
                     <p className="text-[#0b0b0bb3] pt-2">{description}</p>
