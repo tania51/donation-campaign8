@@ -7,7 +7,6 @@ const Home = () => {
     const donationsData = useLoaderData();
     return (
         <div>
-            {/* <Banner></Banner> */}
             <Donations donationsData={donationsData}></Donations>
         </div>
     );

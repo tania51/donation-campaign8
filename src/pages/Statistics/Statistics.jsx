@@ -7,26 +7,35 @@ const Statistics = () => {
 
 
     const getDonationInfoFromLocal = JSON.parse(localStorage.getItem('donate'));
-    const myTotalDonation = getDonationInfoFromLocal.length || 0;
+    if(getDonationInfoFromLocal === null) {
+        return(
+            <div className="flex justify-center items-center h-[60vh]">
+                <div className="text-center italic">
+                    <h1 className="text-4xl">No Donation found for Pie Chart!!</h1>
+                    <p className="text-2xl mt-4">Please Donate First.</p>
+                </div>
+            </div>
+        )
+    } 
+    const myTotalDonation = getDonationInfoFromLocal.length;
 
-    // console.log(totalDonation, myTotalDonation);    
-    // const left = 4;
-    // const total = 12;
 
-
-    const percentageForDonation = ((myTotalDonation / totalDonation) *100 );
-    const percentageForDonationInt = parseInt(percentageForDonation);
-    const donationLeft = 100 - percentageForDonation;
-    const donationLeftTwoDecimal = donationLeft.toFixed(2)
-    const donationLeftInt = parseFloat(donationLeftTwoDecimal);
-    console.log(percentageForDonationInt, donationLeftInt);
+    // const percentageForDonation = ((myTotalDonation / totalDonation) *100 );
+    // const percentageForDonationInt = parseInt(percentageForDonation);
+    // const donationLeft = 100 - percentageForDonation;
+    // const donationLeftTwoDecimal = donationLeft.toFixed(2)
+    // const donationLeftInt = parseFloat(donationLeftTwoDecimal);
+    // console.log(percentageForDonationInt, donationLeftInt);
     
+        
 
     const data = [
         { name: 'A1', value: totalDonation },
         { name: 'A2', value: myTotalDonation },
     ]
+    
 
+    console.log(totalDonation, myTotalDonation);
     const COLORS = ['#FF444A', '#00C49F'];
 
     const RADIAN = Math.PI / 180;
@@ -41,7 +50,8 @@ const Statistics = () => {
             </text>
         );
     };
-   
+    
+    data.map(singleData => console.log(singleData))
 
     return (
         <div>
