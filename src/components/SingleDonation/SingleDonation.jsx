@@ -12,27 +12,26 @@ const SingleDonation = () => {
     // console.log(singleDonation);
     // console.log(singleIdInt);
 
+    
     const clickedDonation = singleDonation.find(donate => donate.id === singleIdInt);
-
     const { id, picture, price, title, description, text_color } = clickedDonation;
 
-    useEffect(() => {
-        const donateSavedArr = [];
-
-        const getDonationInfoFromLocal = JSON.parse(localStorage.getItem('donate'));
-        if (!getDonationInfoFromLocal) {
-            donateSavedArr.push(clickedDonation);
-            localStorage.setItem('donate', JSON.stringify(donateSavedArr));
-        }
-        else {
-            donateSavedArr.push(...getDonationInfoFromLocal, clickedDonation);
-            localStorage.setItem('donate', JSON.stringify(donateSavedArr))
-
-
-        }
-    }, [])
+    const donateSavedArr = [];
+    
 
     const donateHandeler = () => {
+        console.log('donation sucessfully');
+        const getDonationInfoFromLocal = JSON.parse(localStorage.getItem('donate'));
+            if (!getDonationInfoFromLocal) {
+                donateSavedArr.push(clickedDonation);
+                localStorage.setItem('donate', JSON.stringify(donateSavedArr));
+            }
+            else {
+                donateSavedArr.push(...getDonationInfoFromLocal, clickedDonation);
+                localStorage.setItem('donate', JSON.stringify(donateSavedArr))
+    
+    
+            }
 
         Swal.fire({
             position: 'top-end',

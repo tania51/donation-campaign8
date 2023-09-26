@@ -7,8 +7,7 @@ const Donations = ({ donationsData }) => {
     const allDonationData = [...donationsData];
     
     const [displayCards, setDisplayCards] = useState(allDonationData)
-    const [searchDisplayCards, setSearchDisplayCards] = useState(allDonationData)
-    console.log(displayCards);
+    const [searchDisplayCards, setSearchDisplayCards] = useState(allDonationData);
     const searchRef = useRef();
 
     const searchHandeler = e => {

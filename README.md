@@ -1,8 +1,6 @@
-# React + Vite
+* readme file with 3 features
+    * First I made some fake 12 json data. Each data had id, picture, title, category, category_bg_color, card_bg_color, text_color, description, price. Then I created router for all essential pages. After that I created components as my need.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+    * For all pages I created a navbar common component. After that, for home page I build a beautiful banner with a background image, a title and a search input. Bottom of this banner I displayed 12 cards with dynamic data and each row had 4 cards. When someone will come and clicked any card it'll show that card details and there is also a donate button so that they can donate. All donation cards with details are at the doantion page. Donation page had a see all button. Donation page had 4 cards by default. When someone click see all button they will see all cards and see all button will be hidden automatically
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    * Lastly I added a pie chart in statistic page where it'll show percentages my donation against total donation. I created piechart calculated the donations and then it'll show to the statistic page.

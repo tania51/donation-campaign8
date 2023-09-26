@@ -9,8 +9,18 @@ const Statistics = () => {
     const getDonationInfoFromLocal = JSON.parse(localStorage.getItem('donate'));
     const myTotalDonation = getDonationInfoFromLocal.length || 0;
 
-    console.log(totalDonation, myTotalDonation);    
+    // console.log(totalDonation, myTotalDonation);    
+    // const left = 4;
+    // const total = 12;
 
+
+    const percentageForDonation = ((myTotalDonation / totalDonation) *100 );
+    const percentageForDonationInt = parseInt(percentageForDonation);
+    const donationLeft = 100 - percentageForDonation;
+    const donationLeftTwoDecimal = donationLeft.toFixed(2)
+    const donationLeftInt = parseFloat(donationLeftTwoDecimal);
+    console.log(percentageForDonationInt, donationLeftInt);
+    
 
     const data = [
         { name: 'A1', value: totalDonation },
@@ -21,16 +31,17 @@ const Statistics = () => {
 
     const RADIAN = Math.PI / 180;
     const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
-        const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
+        const radius = innerRadius + (outerRadius - innerRadius) * 0.3;
         const x = cx + radius * Math.cos(-midAngle * RADIAN);
         const y = cy + radius * Math.sin(-midAngle * RADIAN);
 
         return (
             <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
-                {`${(percent * 100).toFixed(0)}%`}
+                {`${(percent * 100).toFixed(1)}%`}
             </text>
         );
     };
+   
 
     return (
         <div>
@@ -47,6 +58,7 @@ const Statistics = () => {
                             fill="#8884d8"
                             dataKey="value"
                         >
+                            
                             {data.map((entry, index) => (
                                 <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                             ))}
