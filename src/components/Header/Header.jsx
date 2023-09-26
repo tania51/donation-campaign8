@@ -1,11 +1,12 @@
 import { NavLink } from "react-router-dom";
+import img from '../../assets/Logo.png';
 
 
 const Header = () => {
     return (
         <div className="px-10">
             <div className="md:flex md:justify-between py-6 items-center text-center">
-                <img className="w-52 mx-auto md:mx-0" src="../../../src/assets/Logo.png" alt="some" />
+                <img className="w-52 mx-auto md:mx-0" src={img} alt="Donation Logo" />
                 <div className="flex text-lg gap-3 justify-center pt-4 md:pt-0">
                     <NavLink to="/"
                         className={({ isActive, isPending }) =>

@@ -35,9 +35,6 @@ const Donation = () => {
                 }
 
             </div>
-            {/* <div className="text-center">
-                <button onClick={() => setSeeAll(!seeAll)} className="my-10 bg-green-500 px-5 py-1 rounded text-white">See All</button>
-            </div> */}
         </div>
     );
 };

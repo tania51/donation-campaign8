@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import Donation from "../Donation/Donation";
+import bgImage from '../../assets/banner.jpg';
 
 
 
@@ -40,7 +41,7 @@ const Donations = ({ donationsData }) => {
         <div>
             {/* banner section */}
             <div className="h-[70vh]">
-                <div className="h-full w-full bg-[url('../../../src/assets/banner.jpg')] flex items-center justify-center bg-contain bg-blend-overlay bg-[#fcfbfbf2]">
+                <div className={`h-full w-full flex items-center justify-center bg-contain bg-blend-overlay bg-[#fcfbfbf2]`} style={{backgroundImage: `url(${bgImage}`}}>
                     <div>
                         <h1 className="text-lg md:text-3xl text-[#0B0B0B] font-bold mb-7">I Grow By Helping People In Need</h1>
                         <div className="relative flex h-10 w-full min-w-[200px] max-w-[24rem] mt-3">

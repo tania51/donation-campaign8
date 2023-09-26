@@ -10,7 +10,7 @@ const Donation = ({ donation }) => {
 
     return (
         <div>
-            <Link to={`/singledonation/${id}`}>
+            <Link to={`/donation-details/${id}`}>
                 <div style={{ backgroundColor: card_bg_color }} className="relative flex flex-col rounded bg-clip-border text-gray-700 shadow-md">
                     <div className="relative h-44 overflow-hidden rounded-t-lg bg-white bg-clip-border text-gray-700">
                         <img

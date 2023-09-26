@@ -27,7 +27,7 @@ const DonateAllCard = ({ donate }) => {
                         ${price}
                     </p>
                     <a className="inline-block" href="#">
-                        <Link to={`/singledonation/${id}`}>
+                        <Link to={`/donation-details/${id}`}>
                             <button style={{ backgroundColor: text_color }}
                                 className="rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                                 type="button"
